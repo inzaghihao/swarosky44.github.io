@@ -1,0 +1,690 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Node中使用ES6
+支持情况Node 对 ES6 的支持分为 3 个等级：
+
+shipping (已经分发并默认启用)
+
+Block scoping
+
+let (strict mode only)
+
+const
+
+function-in-blocks (strict mode only [1])
+
+Classes (strict mode only)
+
+Collections
+
+Map
+
+Wea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Engineer | Listen">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/Node中使用ES6/index.html">
+<meta property="og:site_name" content="Engineer | Listen">
+<meta property="og:description" content="Node中使用ES6
+支持情况Node 对 ES6 的支持分为 3 个等级：
+
+shipping (已经分发并默认启用)
+
+Block scoping
+
+let (strict mode only)
+
+const
+
+function-in-blocks (strict mode only [1])
+
+Classes (strict mode only)
+
+Collections
+
+Map
+
+Wea">
+<meta property="og:updated_time" content="2016-07-12T02:55:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Engineer | Listen">
+<meta name="twitter:description" content="Node中使用ES6
+支持情况Node 对 ES6 的支持分为 3 个等级：
+
+shipping (已经分发并默认启用)
+
+Block scoping
+
+let (strict mode only)
+
+const
+
+function-in-blocks (strict mode only [1])
+
+Classes (strict mode only)
+
+Collections
+
+Map
+
+Wea">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/12/Node中使用ES6/"/>
+
+  <title>  | Engineer | Listen </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Engineer | Listen</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">wanner be a great Font-End Engineer</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-12T10:55:44+08:00" content="2016-07-12">
+              2016-07-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Node中使用ES6"><a href="#Node中使用ES6" class="headerlink" title="Node中使用ES6"></a>Node中使用ES6</h1><hr>
+<h2 id="支持情况"><a href="#支持情况" class="headerlink" title="支持情况"></a>支持情况</h2><p><code>Node</code> 对 <code>ES6</code> 的支持分为 3 个等级：</p>
+<ul>
+<li><p>shipping (已经分发并默认启用)</p>
+<ul>
+<li><p>Block scoping</p>
+</li>
+<li><p>let (strict mode only)</p>
+</li>
+<li><p>const</p>
+</li>
+<li><p>function-in-blocks (strict mode only [1])</p>
+</li>
+<li><p>Classes (strict mode only)</p>
+</li>
+<li><p>Collections</p>
+</li>
+<li><p>Map</p>
+</li>
+<li><p>WeakMap</p>
+</li>
+<li><p>Set</p>
+</li>
+<li><p>WeakSet</p>
+</li>
+<li><p>Typed arrays</p>
+</li>
+<li><p>Generators</p>
+</li>
+<li><p>Binary and Octal literals</p>
+</li>
+<li><p>Object literal extensions (shorthand properties and methods)</p>
+</li>
+<li><p>Promises</p>
+</li>
+<li><p>New String methods</p>
+</li>
+<li><p>Symbols</p>
+</li>
+<li><p>Template strings</p>
+</li>
+<li><p>Arrow Functions</p>
+</li>
+<li><p>new.target [2]</p>
+</li>
+<li><p>Object.assign</p>
+</li>
+<li><p>Spread operator [2]</p>
+</li>
+</ul>
+</li>
+<li><p>staged (已经分发，需要启用 <code>-harmony</code>)</p>
+<ul>
+<li><p>Symbol.toStringTag</p>
+</li>
+<li><p>Array.prototype.includes （可以直接使用 polyfill 支持， 5.x 版本）</p>
+</li>
+<li><p>Rest Parameters （可以直接用 transform-es2015-parameters 转换，支持更全面， 5.x 版本）</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>in progress (开发中，不稳定或未实现，不推荐使用)</li>
+</ul>
+<hr>
+<h2 id="babel配置步骤"><a href="#babel配置步骤" class="headerlink" title="babel配置步骤"></a>babel配置步骤</h2><p>那么对于我偏偏要用 <code>ES6</code> 写 <code>node</code> 怎么办呢？我喜欢用箭头函数呀，喜欢解构呀，喜欢 <code>let</code> <code>const</code> 这样定义不同属性的变量啊。</p>
+<p>于是 我们就需要学习使用 <code>babel</code> 来编译我们的 <code>es6</code> 语法。</p>
+<h3 id="express-生成项目"><a href="#express-生成项目" class="headerlink" title="express 生成项目"></a>express 生成项目</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ express test</div><div class="line">``` </div><div class="line"></div><div class="line">生成了项目后，首先我们需要安装对 `babel` 的的依赖</div><div class="line"></div><div class="line">### 安装 `babel`</div><div class="line"></div><div class="line">在 `package.json` 里面添加如下代码：</div></pre></td></tr></table></figure>
+<p>“devDependencies”: {<br>  “babel-plugin-transform-class-properties”: “^6.5.2”,<br>  “babel-plugin-transform-runtime”: “^6.5.2”,<br>  “babel-polyfill”: “^6.5.0”,<br>  “babel-preset-es2015”: “^6.5.0”,<br>  “babel-preset-react”: “^6.5.0”,<br>  “babel-preset-stage-0”: “^6.5.0”,<br>  “babel-register”: “^6.5.2”,<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">再执行 `npm install`</div><div class="line"></div><div class="line">### `require babel hook`</div><div class="line"></div><div class="line">我需要将 `babel` 的钩子与我们的项目连接上，这样才能在v8解析代码前先预编译我们的 `es6` 语法成 `es5` 的。</div><div class="line"></div><div class="line">找到 `./bin/www` 然后在最顶部添加一行代码：</div></pre></td></tr></table></figure></p>
+<p>require(‘babel-register’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 安装插件</div><div class="line"></div><div class="line">我们安装那么多 `babel` 依赖，其中有许多是 `es6` 语法必须要用的。</div><div class="line"></div><div class="line">所以我们再根目录下新建一个 `.babelrc` 的文件。</div><div class="line"></div><div class="line">在其中写如下代码：</div></pre></td></tr></table></figure></p>
+<p>{<br>  “presets”: [<br>    “es2015”,<br>    “stage-0”<br>  ],<br>  “plugins”: [<br>    “transform-runtime”,<br>    “transform-class-properties”<br>  ]<br>}<br>```</p>
+<hr>
+<p>完成如上步骤，就可以在 <code>app.js</code> 中尝试一下能不能使用 <code>es6</code>的语法啦~</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/12/this & new/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/12/html & css开发规范指南/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oe3rjg2g6.bkt.clouddn.com/yaluji.png"
+               alt="listen" />
+          <p class="site-author-name" itemprop="name">listen</p>
+          <p class="site-description motion-element" itemprop="description">Font-End Engineer</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Node中使用ES6"><span class="nav-number">1.</span> <span class="nav-text">Node中使用ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#支持情况"><span class="nav-number">1.1.</span> <span class="nav-text">支持情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#babel配置步骤"><span class="nav-number">1.2.</span> <span class="nav-text">babel配置步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#express-生成项目"><span class="nav-number">1.2.1.</span> <span class="nav-text">express 生成项目</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">listen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

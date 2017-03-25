@@ -1,0 +1,662 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="CSS Secrets 是我读过的最好的 CSS 学习的书籍之一了。
+二刷 CSS Secrets 希望自己能够更加聚焦 &amp;amp; 思考作者提供的 demo 的底层原理以及实现方式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Secrets a week">
+<meta property="og:url" content="http://yoursite.com/2016/09/26/Css-Secrets-a-week/index.html">
+<meta property="og:site_name" content="Listen">
+<meta property="og:description" content="CSS Secrets 是我读过的最好的 CSS 学习的书籍之一了。
+二刷 CSS Secrets 希望自己能够更加聚焦 &amp;amp; 思考作者提供的 demo 的底层原理以及实现方式。">
+<meta property="og:image" content="http://oe3rjg2g6.bkt.clouddn.com/button.jpg">
+<meta property="og:updated_time" content="2016-09-27T03:35:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS Secrets a week">
+<meta name="twitter:description" content="CSS Secrets 是我读过的最好的 CSS 学习的书籍之一了。
+二刷 CSS Secrets 希望自己能够更加聚焦 &amp;amp; 思考作者提供的 demo 的底层原理以及实现方式。">
+<meta name="twitter:image" content="http://oe3rjg2g6.bkt.clouddn.com/button.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/09/26/Css-Secrets-a-week/"/>
+
+  <title> CSS Secrets a week | Listen </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Listen</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">wanner be a great Font-End Engineer</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS Secrets a week
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-26T21:27:52+08:00" content="2016-09-26">
+              2016-09-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Css-Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Css Study</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CSS Secrets 是我读过的最好的 CSS 学习的书籍之一了。</p>
+<p>二刷 CSS Secrets 希望自己能够更加聚焦 &amp; 思考作者提供的 demo 的底层原理以及实现方式。</p>
+<a id="more"></a>
+<h2 id="一、浏览器前缀"><a href="#一、浏览器前缀" class="headerlink" title="一、浏览器前缀"></a>一、浏览器前缀</h2><p>在前几年的 CSS 开发过程中，开发者经常需要在 CSS3 新增的属性前加上浏览器的特定前缀。比如 FireFox 的 -moz-，IE 的 -ms-， Opera 的 -o-， 以及 chrome 的 -webkit-。但是本书并不会去写这样的样式兼容代码，因为在现在看来，已经越来越多的厂商取消掉了实验性属性的浏览器前缀. 在未来实验性属性的使用是通过配置设置的，所以这里我们也不会支持。</p>
+<h2 id="二、CSS-编码技巧"><a href="#二、CSS-编码技巧" class="headerlink" title="二、CSS 编码技巧"></a>二、CSS 编码技巧</h2><h3 id="减少代码重复"><a href="#减少代码重复" class="headerlink" title="减少代码重复"></a>减少代码重复</h3><p>原版 -<br>  <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">padding</span>: <span class="number">6px</span> <span class="number">16px</span>;</div><div class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#446d88</span>;</div><div class="line"><span class="attribute">background</span>: <span class="number">#58a</span> linear-gradient(<span class="number">#77a0bb</span>, <span class="number">#58a</span>);</div><div class="line"><span class="attribute">border-radius</span>: <span class="number">4px</span>;</div><div class="line"><span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">5px</span> gray;</div><div class="line"><span class="attribute">color</span>: white;</div><div class="line"><span class="attribute">text-shadow</span>: <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">#335166</span>;</div><div class="line"><span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line"><span class="attribute">line-height</span>: <span class="number">30px</span>;</div></pre></td></tr></table></figure></p>
+<p>改进版 -<br>  <figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">padding</span>: .<span class="number">3rem</span> .<span class="number">8rem</span>;</div><div class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#446d88</span>;</div><div class="line"><span class="attribute">background</span>: <span class="number">#58a</span> linear-gradient(hsla(<span class="number">0</span>,<span class="number">0%</span>,<span class="number">100%</span>,.<span class="number">2</span>), transparent);</div><div class="line"><span class="attribute">border-radius</span>: .<span class="number">2rem</span>;</div><div class="line"><span class="attribute">box-shadow</span>: <span class="number">0</span> .<span class="number">05rem</span> .<span class="number">25rem</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">5</span>);</div><div class="line"><span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line"><span class="attribute">text-shadow</span>: <span class="number">0</span>. -.<span class="number">05rem</span> .<span class="number">05rem</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">5</span>);</div><div class="line"><span class="attribute">font-size</span>: <span class="number">1rem</span>;</div><div class="line"><span class="attribute">line-height</span>: <span class="number">1.5</span>;</div></pre></td></tr></table></figure></p>
+<p><img src="http://oe3rjg2g6.bkt.clouddn.com/button.jpg" alt="Alt Image Text"></p>
+<p>改进版与原版代码分析 -</p>
+<ul>
+<li>替换 <code>rem</code> 的相对单位：如果我们希望整站的元素大小进行一定缩放的时候，这个 <code>px</code> 的绝对单位会让我们不得不重新全部修改一遍。相对而言，相对单位 <code>rem</code> 可以减少 99% 的工作。我们只需要更改一下 html 里面的 <code>font-size</code> 大小。</li>
+</ul>
+<ul>
+<li><p><code>line-height</code> 变成倍数关系：如果我们希望修改一下字体大小，那我使用 <code>px</code> 去定义的 <code>line-height</code> 的话，我们也不得不跟随修改一下 <code>line-height</code> 的大小。直接使用倍数关系，css 会自动计算为字体大小的倍数关系，比如这里就是字体的 1.5 倍大小。实际上大部分设计师在设计的时候也会设置行高为字体的 1.4 - 2 倍。</p>
+</li>
+<li><p><code>linear-gradient</code> 修改为透明色：这是因为对于按钮而言，它的明暗面是跟随背景颜色而变化的。在实际项目中，我们还会有红色、绿色、蓝色等按钮，这个时候固定的色值 #77a0bb 就不合适，这里有个小技巧就是将第二层的背景色用半透明的黑或白覆盖在背景色上就可以产生合适的明暗面。</p>
+</li>
+<li><p>投影的固定色值修改成半透明的黑：这是因为 固定色值的投影只适合某个颜色的背景，而具有透明度的黑则能适应更多的场景。</p>
+</li>
+</ul>
+<p>经过上面的改进，我们新的按钮就可以使用在更多的场景中，并且修改 元素大小 或者 字号大小则工作量要减少许多。除了上面提及的 单位 &amp; 色值等技巧。</p>
+<p>还有以下几点也可以让我们的代码更加 DRY：</p>
+<ul>
+<li><p>代码易维护 vs 代码量少</p>
+  <figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">border-width</span>: 10px 10px 10px 0;</div><div class="line"></div><div class="line"><span class="maxima"><span class="built_in">border</span>-<span class="built_in">width</span>: 10px;</span></div><div class="line"><span class="built_in">border</span>-left-<span class="built_in">width</span>: <span class="number">0</span>;</div></pre></td></tr></table></figure>
+<p>  上面两段代码虽然第一段比较少，但是第二段更具有易读性，并且我们修改左右没有边框或者右边或者上下的时候，会更加的方便。</p>
+</li>
+<li><p>currentColor：这是 CSS3 之后提出的第一个和色值有关的 变量。这是一个指向当前文本颜色的变量</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">hr</span> &#123;</div><div class="line">  <span class="attribute">color</span>: currentColor;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>  <code>currentColor</code> 可以使用的地方还包括了 <code>box-shadow</code> <code>text-shadow</code> <code>border-color</code><br>  <code>outline-color</code>等等。</p>
+</li>
+<li><p>继承：关于 <code>inherit</code> 属性一直存在，但能够正确使用却很难。它会将当前使用的属性与父元素该属性绑定并保持一致（伪元素则绑定到宿主元素身上）。在 <code>font</code> <code>background</code> 等都可以使用。善用 <code>inherit</code> 可以让我们遇见样式需求的时候改动代码量大大减小。</p>
+</li>
+</ul>
+<h3 id="相信眼睛而不是数字"><a href="#相信眼睛而不是数字" class="headerlink" title="相信眼睛而不是数字"></a>相信眼睛而不是数字</h3><p>产品上线生产环境之后，出现在用于眼中的样式才真正的最重要的，因为视觉上的体验笔记一味遵守设计师定义的数值更加具有意义。（但是绝对不建议在开发初期或者中期就尝试这样的代码更新，那样只会让自己更加容易出错）</p>
+<h3 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h3><p>在这几年移动互联的概念越发火热，很多网站追求的不再是 PC 上的样式，更希望能够兼容到移动端。响应式主要使用的 CSS3 中提供的媒体查询 <code>@media</code>，但是对 <code>@media</code> 的滥用会造成难以想象的恶果，代码可维护性会被破坏殆尽。之后人们对于响应式网站的实现采用的是一套技术融合实现的 - <code>rem vm vh</code> 单位 + 弹性布局 + <code>media</code></p>
+<p>这里作者给出了几点建议，可以让我们更少的使用 <code>media</code>，让网页自适应屏幕大小的改变。</p>
+<ol>
+<li><p><strong>媒体查询的断点</strong>：媒体查询是基于一定断点选择适用样式的 <code>max-width: 480px; min-width: 860px;</code> 诸如此类的数值我们称之为断点，这些断点的值不应该是根据特定设备而言，如果针对 Iphone5 的 320px 编写一套样式，又为 Iphone6 的 375px 编写一套样式的话，我们会陷入无穷无尽的样式修复的坑中。所以建议按照设计师的设计图选择断点。</p>
+</li>
+<li><p>百分比宽高取代固定宽高** 建议使用 <code>vm vh vmin vmax</code> 这样基于视口的百分比单位，采用固定单位会死的很惨…</p>
+</li>
+<li><p><strong>大屏下对固定宽度使用 <code>max-width</code> 而不是 <code>width</code></strong> 这样能自适应小屏</p>
+</li>
+<li><p><strong>替换元素设置 <code>max-width：100%</code></strong> 替换元素指 <code>img object video frame</code> 等</p>
+</li>
+<li><p><strong><code>background-size: cover</code>背景图铺满容器</strong></p>
+</li>
+<li><p><strong>采用弹性盒子布局</strong> <code>display: flex</code> 或者用 <code>display: inline-block; white-space: wrap</code> 来处理行列布局非常有效。</p>
+</li>
+<li><p><strong>多列布局指定 <code>column-width</code></strong> 不指定 <code>column-count</code>，这样可以自动在小屏手机上显示为单列布局。</p>
+</li>
+</ol>
+<h3 id="合理使用简写"><a href="#合理使用简写" class="headerlink" title="合理使用简写"></a>合理使用简写</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">background: </span>rebeccapurple<span class="comment">;</span></div><div class="line"><span class="keyword">background-color: </span>rebeccapurple<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>上述代码产生最终效果虽然一致，但是并不代表代码含义一致，前者采用简写，默认了许多其他属性。<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">background</span>: <span class="built_in">background</span>-<span class="built_in">color</span> | <span class="built_in">background</span>-<span class="built_in">image</span> | <span class="built_in">background</span>-repeat | <span class="built_in">background</span>-attachment | <span class="built_in">background</span>-<span class="built_in">position</span> ;</div></pre></td></tr></table></figure></p>
+<p>这样默认保护了我们我们对背景色的设置，如果有人改写添加了一个 选择器优先级更高的样式，并设置了 <code>background-image</code> 这样对于第二行代码而言，背景色就会被背景图片覆盖。</p>
+<p>使用简写除了一定程度自我保护，还可以减少重复代码</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">background: </span>url(tr.png) top right, url(<span class="keyword">br.png) </span><span class="keyword">bottom </span>left, url(<span class="keyword">bl.png) </span><span class="keyword">bottom </span>left<span class="comment">;</span></div><div class="line"><span class="keyword">background-repeat: </span>no-repeat<span class="comment">;</span></div><div class="line"><span class="keyword">background-size: </span><span class="number">2</span>rem <span class="number">2</span>rem<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>这里我们渲染了三层的背景，被单独提取出来的 <code>background-</code> 属性会自动分配到所有背景上。</p>
+<h3 id="是否使用预处理器"><a href="#是否使用预处理器" class="headerlink" title="是否使用预处理器"></a>是否使用预处理器</h3><p>预处理器给我们带来的好处是可见的，比如变量、函数、嵌套语法让我们写样式更加方便。所以选择不选择使用预处理器得看个人。不过在将来，CSS 中必然会逐步引入预处理器的这些优势，比如变量、函数等。那个时候我们就不必再依赖预处理器了。</p>
+<blockquote>
+<p>CSS SECRETS - 引言</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag">#CSS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/12/关于NPM的二三事/" rel="next" title="关于 NPM 的二三事">
+                <i class="fa fa-chevron-left"></i> 关于 NPM 的二三事
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/08/Css Secrets a week - 2/" rel="prev" title="CSS Secrets a week">
+                CSS Secrets a week <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oe3rjg2g6.bkt.clouddn.com/yaluji.png"
+               alt="listen" />
+          <p class="site-author-name" itemprop="name">listen</p>
+          <p class="site-description motion-element" itemprop="description">Font-End Engineer</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/swarosky44" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、浏览器前缀"><span class="nav-number">1.</span> <span class="nav-text">一、浏览器前缀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、CSS-编码技巧"><span class="nav-number">2.</span> <span class="nav-text">二、CSS 编码技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#减少代码重复"><span class="nav-number">2.1.</span> <span class="nav-text">减少代码重复</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相信眼睛而不是数字"><span class="nav-number">2.2.</span> <span class="nav-text">相信眼睛而不是数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式设计"><span class="nav-number">2.3.</span> <span class="nav-text">响应式设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合理使用简写"><span class="nav-number">2.4.</span> <span class="nav-text">合理使用简写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#是否使用预处理器"><span class="nav-number">2.5.</span> <span class="nav-text">是否使用预处理器</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">listen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

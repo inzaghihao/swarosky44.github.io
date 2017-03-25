@@ -1,0 +1,650 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Vuex1.vuex 是什么？
+
+vuex 是一个专门为 vue.js 应用设计的状态管理架构 
+
+2.vuex 为了解决什么问题而出现?
+
+每个组件都有自己的状态，并将其存储在自身内部。但是在应用复杂的情况下，每个组件除了自身的状态还控制着部分其他组件的状态。随着事件流的增长，组件与组件之间的状态影响在组件树里面越来越复杂 ( 事件 ping-pong，子组件 dispatch 父组件，父组件再">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Engineer | Listen">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/vuex学习笔记/index.html">
+<meta property="og:site_name" content="Engineer | Listen">
+<meta property="og:description" content="Vuex1.vuex 是什么？
+
+vuex 是一个专门为 vue.js 应用设计的状态管理架构 
+
+2.vuex 为了解决什么问题而出现?
+
+每个组件都有自己的状态，并将其存储在自身内部。但是在应用复杂的情况下，每个组件除了自身的状态还控制着部分其他组件的状态。随着事件流的增长，组件与组件之间的状态影响在组件树里面越来越复杂 ( 事件 ping-pong，子组件 dispatch 父组件，父组件再">
+<meta property="og:updated_time" content="2016-07-12T02:55:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Engineer | Listen">
+<meta name="twitter:description" content="Vuex1.vuex 是什么？
+
+vuex 是一个专门为 vue.js 应用设计的状态管理架构 
+
+2.vuex 为了解决什么问题而出现?
+
+每个组件都有自己的状态，并将其存储在自身内部。但是在应用复杂的情况下，每个组件除了自身的状态还控制着部分其他组件的状态。随着事件流的增长，组件与组件之间的状态影响在组件树里面越来越复杂 ( 事件 ping-pong，子组件 dispatch 父组件，父组件再">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/12/vuex学习笔记/"/>
+
+  <title>  | Engineer | Listen </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Engineer | Listen</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">wanner be a great Font-End Engineer</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-12T10:55:44+08:00" content="2016-07-12">
+              2016-07-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h1><p>1.vuex 是什么？</p>
+<blockquote>
+<p>vuex 是一个专门为 vue.js 应用设计的状态管理架构 </p>
+</blockquote>
+<p>2.vuex 为了解决什么问题而出现?</p>
+<blockquote>
+<p>每个组件都有自己的状态，并将其存储在自身内部。但是在应用复杂的情况下，每个组件除了自身的状态还控制着部分其他组件的状态。随着事件流的增长，组件与组件之间的状态影响在组件树里面越来越复杂 ( 事件 ping-pong，子组件 dispatch 父组件，父组件再 broadcast )</p>
+</blockquote>
+<p>3.vuex 如何解决共享状态问题？</p>
+<blockquote>
+<p>每个组件内部的状态分为两类：本地状态 和 应用状态。应用状态不属于任何一个组件，任何组件都可以监听并及时响应应用状态引发的 DOM 更新。将应用状态放在同一个地方统一管理。</p>
+</blockquote>
+<p>4.vuex 的应用状态实例 store 由什么组成？</p>
+<blockquote>
+<p>state: 一个反应应用状态的对象</p>
+<p>mutation: 一些用于改变状态的函数。Mutations 必须是同步的。</p>
+<p>actions: 一些用于触发 mutations 的函数。包含流程中的异步操作，可以触发多个 mutations</p>
+</blockquote>
+<p>5.如何访问state、mutation、actions？</p>
+<blockquote>
+<p>通过 store.state 访问 state 对象；通过 store.actions 访问actions 函数；不能直接访问 mutation 函数，必须通过调用 actions或者 store.dispatch() 访问</p>
+</blockquote>
+<p>6.如何使用 state 对象？</p>
+<blockquote>
+<p>引入 store 对象，在计算属性中返回 store.state.xxx 等相应的状态部分</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">import store from &apos;./store&apos;</div><div class="line">export default &#123;</div><div class="line">  computed: &#123;</div><div class="line">    message () &#123;</div><div class="line">      return store.state.message</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 store 对象必须遵守的一点是：不允许在组件内直接改变store.state ，使用计算属性确保了 store.state是只读的。store.state 的改变只能在actions里面发生</p>
+</blockquote>
+<p>7.如何使用 mutations 函数？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">import Vuex form &apos;vuex&apos;</div><div class="line">const store = new Vuex.Store(&#123;</div><div class="line">  state: &#123;</div><div class="line">    count: 1</div><div class="line">  &#125;,</div><div class="line">  mutations: &#123;</div><div class="line">    INCREMENT (state) &#123;</div><div class="line">      state.count++</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>触发 mutation hanler 不能直接调用，可以通过 <code>store.dispatch(&#39;INCREMENT&#39;)</code></p>
+<p>state 对象永远是 mutation handler 的第一个参数。额外的参数在第二位开始传递。</p>
+</blockquote>
+<p>8.mutations 应当遵守哪些规则？</p>
+<blockquote>
+<p>1.在创建 store 初始化 state 的所有属性</p>
+<p>2.添加一个原本不存在的属性使用 <code>Vue.set(obj, &#39;newProp&#39;, 123)</code> </p>
+<p>3.用常量为 mutations 命名    </p>
+<p>4.mutation handler 必须是同步的。所有的异步请求在 actions 里面处理</p>
+</blockquote>
+<p>9.如何使用 actions 对象？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">const store = new Vuex.Store(&#123;</div><div class="line">  state: &#123;</div><div class="line">    count: 1</div><div class="line">  &#125;,</div><div class="line">  mutations: &#123;</div><div class="line">    INCREMENT (state, x) &#123;</div><div class="line">      state.count += x</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  actions: &#123;</div><div class="line">    increment: &apos;INCREMENT&apos;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>调用 actions ：<code>store.actions.increment(1)</code></p>
+<p>包含异步操作的 actions ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">const store = Vuex.Store(&#123;</div><div class="line">  state: &#123;</div><div class="line">    count: 1</div><div class="line">  &#125;,</div><div class="line">  mutation: &#123;</div><div class="line">    INCREMENT (state, x) &#123;</div><div class="line">      state.count += x</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  actions: &#123;</div><div class="line">    incrementIfOdd: (store, x) =&gt; &#123;</div><div class="line">      if ((store.state.count + 1) % 2 === 0) &#123;</div><div class="line">        store.dispatch(&apos;INCREMENT&apos;, x)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>参数解构简化函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">actions: &#123;</div><div class="line">  incrementIfOdd: (&#123;dispatch, state&#125;, x) =&gt; &#123;</div><div class="line">    if ((state.count + 1) % 2 === 0) &#123;</div><div class="line">      dispatch(&apos;INCREMENT&apos;, x)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>10.使用 vuex 实例 demo：</p>
+<p>(1) 引入并加载vuex</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import Vuex from &apos;vuex&apos;</div><div class="line">Vue.use(Vuex)</div></pre></td></tr></table></figure>
+<p>(2) 定义 state 对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const state = &#123;</div><div class="line">  count: 0</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>(3) 定义 mutation 对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">const mutations = &#123;</div><div class="line">  INCREMENT (state) &#123;</div><div class="line">    state.count++</div><div class="line">  &#125;,</div><div class="line">  DECREMENT (state) &#123;</div><div class="line">    state.count--</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>(4) 定义 actions</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">const actions = &#123;</div><div class="line">  increment: &apos;INCREMENT&apos;,</div><div class="line">  decrement: &apos;DECREMENT&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>(5) 创建 store 实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">export default new Vuex.Store(&#123;</div><div class="line">  state,</div><div class="line">  mutations,</div><div class="line">  actions</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>(6) 在 vue 组件里面使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import store form &apos;./store.js&apos;</div><div class="line">export default &#123;</div><div class="line">  computed: &#123;</div><div class="line">    count () &#123;</div><div class="line">      return store.state.count</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    increment: store.actions.increment,</div><div class="line">    decrement: store.actions.decrement</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>11.vuex 推荐的应用结构是什么样？</p>
+<blockquote>
+<p>1.state存在于单个对象中</p>
+<p>2.只有 mutation handler 可以改变 state</p>
+<p>3.Mutations 必须是同步的，它的职责是改变 state</p>
+<p>4.所有类似数据获取的异步操作应该封装在 actions 里面</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">简单项目文件结构如下：</div><div class="line">|--index.html</div><div class="line">|--main.js</div><div class="line">|--components</div><div class="line">|  |--App.vue</div><div class="line">|  |...</div><div class="line">|--store</div><div class="line">   |--index.js</div><div class="line">   |--actions.js</div><div class="line">   |--mutations.js</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">复杂项目文件结构如下：</div><div class="line">|--index.html</div><div class="line">|--main.js</div><div class="line">|--api</div><div class="line">|</div><div class="line">|--components</div><div class="line">|  |--App.vue</div><div class="line">|  |...</div><div class="line">|--store</div><div class="line">   |--actions.js</div><div class="line">   |--index.js</div><div class="line">   |--modules</div><div class="line">   |   |--cart.js</div><div class="line">   |   |--productes.js</div><div class="line">   |---mutation-types.js</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">典型模块：</div><div class="line">// store/modules/products.js</div><div class="line">import &#123; RECEIVE_PRODUCTS, ADD_TO_CART &#125; from &apos;../mutation-types&apos;</div><div class="line">// 该模块初始状态</div><div class="line">export const productsInitialState = []</div><div class="line">//相关的 mutations</div><div class="line">export const productsMutations = &#123;</div><div class="line">  [RECEIVE_PRODUCTS] (state, products) &#123;</div><div class="line">    state.products = products</div><div class="line">  &#125;,</div><div class="line">  [ADD_TO_CART] (&#123; products &#125;, productId) &#123;</div><div class="line">    const product = products.find(p =&gt; p.id === productId)</div><div class="line">    if (product.inventory &gt; 0) &#123;</div><div class="line">      product.inventory--</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">// store/index.js</div><div class="line">import Vue from &apos;vue&apos;</div><div class="line">import Vuex from &apos;../../../src&apos;</div><div class="line">import * as actions from &apos;./actions&apos;</div><div class="line">// 导入各个模块的初始状态和 mutations</div><div class="line">import &#123; cartInitialState, cartMutations &#125; from &apos;./modules/cart&apos;</div><div class="line">import &#123; productsInitialState, productsMutations &#125; from &apos;./modules/products&apos;</div><div class="line">Vue.use(Vuex)</div><div class="line">export default new Vuex.Store(&#123;</div><div class="line">  // ...</div><div class="line">  // 将各个模块的状态组合成最终的根状态 (root state)</div><div class="line">  state: &#123;</div><div class="line">    cart: cartInitialState,</div><div class="line">    products: productsInitialState</div><div class="line">  &#125;,</div><div class="line">  // mutations 选项可以是一个包含多个对象的数组</div><div class="line">  mutations: [cartMutations, productsMutations]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>对于计算属性中各个组件中可能存在部分能够提出来的公共方法，可以提出作为一个getters.js的文件</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import store from &apos;./store&apos;</div><div class="line">export function filteredTodos () &#123;</div><div class="line">  return store.state.messages.filter(message =&gt; &#123;</div><div class="line">    return message.threadID === vuex.state.currentThreadID</div><div class="line">  &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/12/this & new/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oe3rjg2g6.bkt.clouddn.com/yaluji.png"
+               alt="listen" />
+          <p class="site-author-name" itemprop="name">listen</p>
+          <p class="site-description motion-element" itemprop="description">Font-End Engineer</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vuex"><span class="nav-number">1.</span> <span class="nav-text">Vuex</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">listen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

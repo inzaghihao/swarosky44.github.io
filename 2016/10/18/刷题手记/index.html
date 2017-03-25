@@ -1,0 +1,648 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="今天早起闲来无事去 CodeWars 刷了几道题。其中几题的实现因为部分基础知识点的缺失，实现变得一点都不简洁。特地做一下笔记 ~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="刷题手记">
+<meta property="og:url" content="http://yoursite.com/2016/10/18/刷题手记/index.html">
+<meta property="og:site_name" content="Listen">
+<meta property="og:description" content="今天早起闲来无事去 CodeWars 刷了几道题。其中几题的实现因为部分基础知识点的缺失，实现变得一点都不简洁。特地做一下笔记 ~">
+<meta property="og:updated_time" content="2016-10-19T09:29:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="刷题手记">
+<meta name="twitter:description" content="今天早起闲来无事去 CodeWars 刷了几道题。其中几题的实现因为部分基础知识点的缺失，实现变得一点都不简洁。特地做一下笔记 ~">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/18/刷题手记/"/>
+
+  <title> 刷题手记 | Listen </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Listen</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">wanner be a great Font-End Engineer</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                刷题手记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-18T16:11:52+08:00" content="2016-10-18">
+              2016-10-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今天早起闲来无事去 CodeWars 刷了几道题。其中几题的实现因为部分基础知识点的缺失，实现变得一点都不简洁。特地做一下笔记 ~</p>
+<a id="more"></a>
+<h2 id="Square-Every-Digit"><a href="#Square-Every-Digit" class="headerlink" title="Square Every Digit"></a>Square Every Digit</h2><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>将一串数的每位上的数字都平方，返回该数字</p>
+<p>eg: 9119 =&gt; 811181</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">squareDigits</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">parseInt</span>(num.toString().split(<span class="string">''</span>).map(<span class="function"><span class="params">itm</span> =&gt;</span> <span class="built_in">parseInt</span>(itm) * <span class="built_in">parseInt</span>(itm)).join(<span class="string">''</span>))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="可优化部分"><a href="#可优化部分" class="headerlink" title="可优化部分"></a>可优化部分</h4><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parseInt(<span class="name">itm</span>) * parseInt(<span class="name">itm</span>)</div></pre></td></tr></table></figure>
+<p>可写为</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Math.<span class="built_in">pow</span>(itm, <span class="number">2</span>)</div></pre></td></tr></table></figure>
+<p><code>Math.pow(x, y)</code> 返回 x 的 y 次幂</p>
+<p>同时，两个字符串相乘的时候，会自动将字符串转类型为数字型，不再需要 <code>parseiInt</code>, <code>Math.pow</code> 也是同理，itm 可以为字符串。两者的返回值都是数字型。</p>
+<p>eg:</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">'10'</span> * <span class="string">'10'</span> <span class="comment">// 100</span></div><div class="line"></div><div class="line">Math.<span class="built_in">pow</span>(<span class="string">'10'</span>, <span class="number">2</span>) <span class="comment">// 100</span></div></pre></td></tr></table></figure>
+<h2 id="Mumbling"><a href="#Mumbling" class="headerlink" title="Mumbling"></a>Mumbling</h2><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>按照下面的规则实现</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">accum</span>(<span class="string">"abcd"</span>);    <span class="comment">// "A-Bb-Ccc-Dddd"</span></div><div class="line"><span class="selector-tag">accum</span>(<span class="string">"RqaEzty"</span>); <span class="comment">// "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"</span></div><div class="line"><span class="selector-tag">accum</span>(<span class="string">"cwAt"</span>);    <span class="comment">// "C-Ww-Aaa-Tttt"</span></div></pre></td></tr></table></figure>
+<h4 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">accum</span>(<span class="params">s</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> s.split(<span class="string">''</span>).map(<span class="function">(<span class="params">itm, idx</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> i = <span class="number">0</span></div><div class="line">    itm = itm.toUpperCase()</div><div class="line">    <span class="keyword">while</span> (i &lt; idx) &#123;</div><div class="line">      itm += s.charAt(idx).toLowerCase()</div><div class="line">      i++</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> itm</div><div class="line">  &#125;).join(<span class="string">'-'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="可优化部分-1"><a href="#可优化部分-1" class="headerlink" title="可优化部分"></a>可优化部分</h4><p>这是 codeWars 认为是最佳解的答案</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">accum</span><span class="params">(s)</span> &#123;</span></div><div class="line">  <span class="keyword">return</span> s.<span class="keyword">split</span>(<span class="string">''</span>).<span class="keyword">map</span>((<span class="keyword">x</span>,<span class="built_in">index</span>) =&gt; <span class="keyword">x</span>.toUpperCase() + Array(<span class="built_in">index</span> + <span class="number">1</span>).<span class="keyword">join</span>(<span class="keyword">x</span>.toLowerCase())).<span class="keyword">join</span>(<span class="string">'-'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这里比较巧妙的是用 <code>Aarry(index + 1)</code> 替代了我的 <code>while</code> 循环，我们也可以采用 <code>repeat(index)</code> 来替换。</p>
+<h2 id="Bit-Counting"><a href="#Bit-Counting" class="headerlink" title="Bit Counting"></a>Bit Counting</h2><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><p>将一个数转化成二进制，统计其中有多少个 1</p>
+<p>eg: 1234 =&gt; 10011010010 =&gt; 5</p>
+<h4 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> countBits = <span class="function"><span class="keyword">function</span><span class="params">(n)</span> &#123;</span></div><div class="line">  <span class="keyword">let</span> <span class="built_in">count</span> = <span class="number">0</span></div><div class="line"></div><div class="line">  <span class="keyword">let</span> recursion = <span class="function"><span class="keyword">function</span> <span class="params">()</span> &#123;</span></div><div class="line">    <span class="keyword">if</span> (n &lt; <span class="number">1</span>) &#123;</div><div class="line">      <span class="keyword">return</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n === <span class="number">1</span>) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="built_in">count</span>++</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">if</span> (n % <span class="number">2</span> === <span class="number">1</span>) &#123;</div><div class="line">        <span class="built_in">count</span>++</div><div class="line">      &#125;</div><div class="line">      n = Math.<span class="built_in">floor</span>(n / <span class="number">2</span>)</div><div class="line">      recursion()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  recursion()</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="built_in">count</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="可优化部分-2"><a href="#可优化部分-2" class="headerlink" title="可优化部分"></a>可优化部分</h4><p>这里推荐两个答案</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">countBits</span><span class="params">(n)</span> </span>&#123;</div><div class="line">  <span class="keyword">for</span>(c=<span class="number">0</span>;n;n&gt;&gt;=<span class="number">1</span>)c+=n&amp;<span class="number">1</span></div><div class="line">  <span class="keyword">return</span> c;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>是不是有点懵逼 … n &gt;&gt;= 1 &amp;&amp; c += n &amp; 1 这是啥呀 !</p>
+<p>不要慌，我们先看看两个位运算符的 &gt;&gt; 和 &amp;</p>
+<p><code>&gt;&gt;</code>: 有符号右运算符</p>
+<p>eg:</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">11</span> &gt;&gt; <span class="number">1</span> =&gt; <span class="number">1011</span> &gt;&gt; <span class="number">1</span> =&gt; <span class="number">0101</span> <span class="comment">// 5</span></div><div class="line"></div><div class="line">相当于对数除以 <span class="number">2</span> 向下取整的结果</div></pre></td></tr></table></figure>
+<p><code>&amp;</code>: 按位与运算符</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">11 </span>&amp; <span class="number">1</span> =&gt; <span class="number">1011</span> &amp; <span class="number">0001</span> =&gt; <span class="number">0001</span></div></pre></td></tr></table></figure>
+<p>所以上面的代码案例，我们可以解析为：</p>
+<ol>
+<li><p>第一次数字 n 进来之后判断 n 是否为 0 ？</p>
+</li>
+<li><p>不为 0 则执行 <code>c += n &amp; 1</code>, 如果 n 二进制数中最后一位不是 1 则 <code>n &amp; 1</code> 等于 0，c 保持不变，相反 <code>c += 1</code></p>
+</li>
+<li><p>代码执行完之后对 n 进行赋值操作 n 整体右移一位，则二进制最后一位右移。</p>
+</li>
+<li><p>持续循环，直到 n 为 0</p>
+</li>
+</ol>
+<p>其实这个案例实现的确十分巧妙，但是也相当难以阅读。并且会改变参数 n 的值，实际开发中其实一点都不推荐，不过能复习一下位运算符也是很不错的 😝</p>
+<p>这是第二个推荐答案</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> countBits = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> n ? n.toString(<span class="number">2</span>).match(<span class="regexp">/1/g</span>).length : <span class="number">0</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>这个看上去就比较便于阅读了，只要掌握了 <code>toString(2)</code> 的含义就能够轻易实现</p>
+<p><code>toString()</code> 是 <code>Object.prototype</code> 上的一个方法，本意是用于将调用者的值转换成字符串，常用于转字符串或者类型判断</p>
+<p>但是! <code>NumberObject.prototype.toString(radix)</code> 上会接受一个参数</p>
+<p><code>radix</code> 表示基数，将数字转化成以基数为紧致的表示形式(默认十进制)。如果调用对象不是 Number ,则会抛出 TypeError 异常。</p>
+<p>差不多比较印象深刻的几道题就是这些，对于一些精巧的解答，确实是又爱又恨，恨自己为什么没有想到呢。看到那些简洁的解法，就喜欢得不行。比如第三个，自己的实现简直就是一坨热翔啊 ！</p>
+<blockquote>
+<p><a href="http://www.w3school.com.cn/jsref/jsref_tostring_number.asp" target="_blank" rel="external">NumberObject.prototype.toString</a></p>
+<p><a href="http://www.w3school.com.cn/js/pro_js_operators_bitwise.asp" target="_blank" rel="external">位运算符</a></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/15/Css Secrets a week - 3/" rel="next" title="CSS Secrets a week">
+                <i class="fa fa-chevron-left"></i> CSS Secrets a week
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/19/正则手记/" rel="prev" title="正则手记">
+                正则手记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oe3rjg2g6.bkt.clouddn.com/yaluji.png"
+               alt="listen" />
+          <p class="site-author-name" itemprop="name">listen</p>
+          <p class="site-description motion-element" itemprop="description">Font-End Engineer</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/swarosky44" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Square-Every-Digit"><span class="nav-number">1.</span> <span class="nav-text">Square Every Digit</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述"><span class="nav-number">1.0.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现"><span class="nav-number">1.0.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可优化部分"><span class="nav-number">1.0.3.</span> <span class="nav-text">可优化部分</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mumbling"><span class="nav-number">2.</span> <span class="nav-text">Mumbling</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可优化部分-1"><span class="nav-number">2.0.3.</span> <span class="nav-text">可优化部分</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bit-Counting"><span class="nav-number">3.</span> <span class="nav-text">Bit Counting</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现-2"><span class="nav-number">3.0.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可优化部分-2"><span class="nav-number">3.0.3.</span> <span class="nav-text">可优化部分</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">listen</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
