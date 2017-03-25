@@ -2,13 +2,13 @@
 
 
 
-  
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+
+<html class="theme-next muse use-motion">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
@@ -29,49 +29,33 @@
 
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  
-  
-  
-  
 
-  
-    
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Front-End, Coding, swarosky44" />
 
 
 
@@ -79,62 +63,63 @@
 
 
 
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="Hexo, NexT" />
 
-<meta name="description" content="Wanner be a great Engineer">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Font-End Engineer">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Listen">
-<meta property="og:url" content="http://swarosky44.github.io/index.html">
+<meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Listen">
-<meta property="og:description" content="Wanner be a great Engineer">
+<meta property="og:description" content="Font-End Engineer">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Listen">
-<meta name="twitter:description" content="Wanner be a great Engineer">
+<meta name="twitter:description" content="Font-End Engineer">
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 0,
       author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="http://swarosky44.github.io/"/>
 
-
-
-
+  <link rel="canonical" href="http://yoursite.com/"/>
 
   <title> Listen </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
 
 
 
@@ -149,87 +134,78 @@
 
 
 
-  
-  
-    
-  
 
-  <div class="container sidebar-position-left 
-   page-home 
+
+  <div class="container one-collumn sidebar-position-left
+   page-home
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+      <div class="header-inner"><div class="site-meta ">
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Listen</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle">a Front-End Engineer</p>
-      
-  </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Listen</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
+  <p class="site-subtitle">wanner be a great Font-End Engineer</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
 </div>
 
 <nav class="site-nav">
-  
 
-  
+
+
     <ul id="menu" class="menu">
-      
-        
+
+
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
+
             首页
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
+
             归档
           </a>
         </li>
-      
-        
+
+
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
+
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
+
             标签
           </a>
         </li>
-      
 
-      
+
+
     </ul>
-  
 
-  
+
+
 </nav>
-
-
 
  </div>
     </header>
@@ -238,151 +214,1205 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-            
+
   <section id="posts" class="posts-expand">
-    
-      
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://swarosky44.github.io/2017/03/25/hello-world/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Listen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://oe3rjg2g6.bkt.clouddn.com/yaluji.png">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Listen">
-    </span>
-
-    
       <header class="post-header">
 
-        
-        
+
+
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/25/hello-world/" itemprop="url">
-                  Hello World
+
+
+
+
+                <a class="post-title-link" href="/2016/12/04/单例模式/" itemprop="url">
+                  单例模式
                 </a>
-              
-            
+
+
           </h1>
-        
+
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T15:54:35+08:00">
-                2017-03-25
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-04T22:49:52+08:00" content="2016-12-04">
+              2016-12-04
+            </time>
           </span>
 
-          
 
-          
-            
-          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
 
-          
-          
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
 
-          
 
-          
 
-          
+                  ，
+
+
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
 
         </div>
       </header>
-    
+
 
 
     <div class="post-body" itemprop="articleBody">
 
-      
-      
 
-      
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/25/hello-world/#more" rel="contents">
+
+
+
+
+          <p>之前几周一直忙着做公司新版移动端的项目，截止这周末完成第一个任务节点，趁此时间赶紧回顾一下之前学习的设计模式的知识 - 单例模式。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/04/单例模式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
-          <!--/noindex-->
-        
-      
+
+
     </div>
 
     <div>
-      
+
     </div>
 
     <div>
-      
-    </div>
 
-    <div>
-      
     </div>
 
     <footer class="post-footer">
-      
 
-      
 
-      
 
-      
-      
+
+
+
         <div class="post-eof"></div>
-      
+
     </footer>
   </article>
 
 
-    
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/11/05/Css Secrets a week - 6/" itemprop="url">
+                  CSS Secrets a week
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-05T15:30:20+08:00" content="2016-11-05">
+              2016-11-05
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Css-Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Css Study</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <h2 id="难题：复杂的背景图案"><a href="#难题：复杂的背景图案" class="headerlink" title="难题：复杂的背景图案"></a>难题：复杂的背景图案</h2><p>这一章节的主要内容全部都是建立在前一章节的内容之上，属于进阶版的知识点。除了对 <code>linear-gradient</code> 的更进一步运用，还会学习到径向渐变 <code>radial-gradient</code>。</p>
+<p>所以强烈推荐先阅读完前一章节，并且深入理解了 <code>linear-gradient</code> 各个属性的含义后再来学习更加复杂的背景图案制作。</p>
+<p><a href="http://swarosky44.github.io/2016/10/31/Css%20Secrets%20a%20week%20-%205/#more">条纹背景</a></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/05/Css Secrets a week - 6/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/11/02/高阶函数手记/" itemprop="url">
+                  高阶函数手记
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-02T14:21:52+08:00" content="2016-11-02">
+              2016-11-02
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <p>这篇关于高阶函数的学习笔记是为了之后的设计模式 &amp; 函数式编程的一系列学习路线的一个铺垫。</p>
+<p>不能一直满足于写写业务写写组件，学习编程原则 &amp; 学习如何高效友好的组织代码，封装对象，提供接口。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/02/高阶函数手记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/10/31/Css Secrets a week - 5/" itemprop="url">
+                  CSS Secrets a week
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-31T13:30:20+08:00" content="2016-10-31">
+              2016-10-31
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Css-Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Css Study</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <h2 id="难题：条纹背景"><a href="#难题：条纹背景" class="headerlink" title="难题：条纹背景"></a>难题：条纹背景</h2><p>条纹设计在日常生活中是十分常见的，但是在 web 开发中，想要实现一个条纹背景，通常我们只能依靠设计师提供图片。但这一点也不灵活，每次改动都必须依赖设计师修图。但是如果我们能够利用 CSS 去实现它，那就很不爽了。</p>
+<p>这一章节对于 <code>linear-gradient()</code> 的理解十分重要，在之后许多章节中作者都有用这样的技术去实现一些以往不可能的 CSS 效果。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/31/Css Secrets a week - 5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/10/25/Css Secrets a week - 4/" itemprop="url">
+                  CSS Secrets a week
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-25T14:45:20+08:00" content="2016-10-25">
+              2016-10-25
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Css-Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Css Study</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <h2 id="难题：灵活的背景定位"><a href="#难题：灵活的背景定位" class="headerlink" title="难题：灵活的背景定位"></a>难题：灵活的背景定位</h2><p>在 CSS2 里面我们只能通过指定背景图片与左上角的距离，或者干脆就贴着其余三个角。为了实现背景图片与元素边框的一定偏移量的能更灵活的布局，CSS3 提供给了我们新的扩展。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/25/Css Secrets a week - 4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/10/19/正则手记/" itemprop="url">
+                  正则手记
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-19T17:30:52+08:00" content="2016-10-19">
+              2016-10-19
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/正则表达式/" itemprop="url" rel="index">
+                    <span itemprop="name">正则表达式</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <p>故事是这样开始的，一个小时前我准备刷一下题，结果第一题就狠狠扇了我的脸，还好几下。</p>
+<p>题目描述：检验银行卡密码，密码长度必须是 4 位 或者 6 位，并且每一位都只能是数字。</p>
+<p>于是我写下我的实现，跑通测试用例，提交之后参考一下别人的答案 …</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="title">validatePIN</span>(pin) &#123;</div><div class="line">  <span class="keyword">return</span> <span class="type">/^(\d&#123;4&#125;|\d&#123;6&#125;)$/.test(pin)</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>至于我写了啥… 不重要了，我要好好学一下正则。以下正文</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/19/正则手记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/10/18/刷题手记/" itemprop="url">
+                  刷题手记
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-18T16:11:52+08:00" content="2016-10-18">
+              2016-10-18
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <p>今天早起闲来无事去 CodeWars 刷了几道题。其中几题的实现因为部分基础知识点的缺失，实现变得一点都不简洁。特地做一下笔记 ~</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/18/刷题手记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/10/15/Css Secrets a week - 3/" itemprop="url">
+                  CSS Secrets a week
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-15T17:27:20+08:00" content="2016-10-15">
+              2016-10-15
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Css-Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Css Study</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <h2 id="难题：实现多重边框"><a href="#难题：实现多重边框" class="headerlink" title="难题：实现多重边框"></a>难题：实现多重边框</h2><p>Css Secrets 书中介绍到：在 css工作组在讨论是否需要提供支持多重边框的属性值，当时工作组以实际需求并不多并且可以通过 border-image 设置边框图片背景来替代真正的多重边框的理由，否决了这一项提议。</p>
+<p>但是实际开发过程中，我们对 Css 的灵活性要求超出了他们的设想，为了实现多重边框的设计，我们不得不采用多重 dom 结构来满足开发。</p>
+<p>本章节中作者提供两种解决方案：box-shadow &amp; outline 来实现多重边框。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/15/Css Secrets a week - 3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/10/12/Proxy 对象/" itemprop="url">
+                  Proxy 对象
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-12T20:27:52+08:00" content="2016-10-12">
+              2016-10-12
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <p>最近在扒 vue2.0 的源码，再看源码的时候遇见这样一段代码 -</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">./src/core/instance/proxy.js</div><div class="line"></div><div class="line"><span class="keyword">let</span> hasProxy = <span class="keyword">typeof</span> <span class="built_in">Proxy</span> !== <span class="string">'undefined'</span> &amp;&amp;</div><div class="line">  <span class="built_in">Proxy</span>.toString().match(<span class="regexp">/native code/</span>)</div><div class="line"></div><div class="line"><span class="keyword">let</span> proxyHandlers = &#123;</div><div class="line">  has (target, key) &#123;</div><div class="line">    ...</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">vm._renderProxy = <span class="keyword">new</span> <span class="built_in">Proxy</span>(vm, proxyHandlers)</div></pre></td></tr></table></figure>
+<p>这段代码里用到一个 Proxy 对象，特地上 MDN 看了一下关于这个对象的介绍。</p>
+<p>在对象的基础操作上我们可以有效地通过 Proxy 实现代理模式。</p>
+<p>虽然还是 ES6 的规范(未必所有浏览器都已经实现了该对象)，但是它确实是一个实用性很强的对象，值得专门学习一下。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/12/Proxy 对象/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+
+      <header class="post-header">
+
+
+
+          <h1 class="post-title" itemprop="name headline">
+
+
+
+
+                <a class="post-title-link" href="/2016/10/08/Css Secrets a week - 2/" itemprop="url">
+                  CSS Secrets a week
+                </a>
+
+
+          </h1>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-08T20:53:20+08:00" content="2016-10-08">
+              2016-10-08
+            </time>
+          </span>
+
+
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Css-Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Css Study</span>
+                  </a>
+                </span>
+
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+
+          <h2 id="难题：实现半透明边框。"><a href="#难题：实现半透明边框。" class="headerlink" title="难题：实现半透明边框。"></a>难题：实现半透明边框。</h2><p>或许会感到莫名其妙，半透明色按照日常用的 opacity 或者 rgba 或者 hsla 就可以实现了。实现一个半透明边框为什么会有难点呢 ？</p>
+<p>不得不承认，读完 Css Secrets 本节之前，的确不知道半透明边框是不能按照半透明背景那样处理就可以实现了的。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/08/Css Secrets a week - 2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <footer class="post-footer">
+
+
+
+
+
+
+        <div class="post-eof"></div>
+
+    </footer>
+  </article>
+
+
+
   </section>
 
-  
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
-          
 
 
-          
+
+
 
         </div>
-        
-          
-  
+
+
+
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -394,89 +1424,92 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
-      
 
-      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oe3rjg2g6.bkt.clouddn.com/yaluji.png"
-               alt="Listen" />
-          <p class="site-author-name" itemprop="name">Listen</p>
-           
-              <p class="site-description motion-element" itemprop="description">Wanner be a great Engineer</p>
-          
+               alt="listen" />
+          <p class="site-author-name" itemprop="name">listen</p>
+          <p class="site-description motion-element" itemprop="description">Font-End Engineer</p>
         </div>
         <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
 
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">日志</span>
+
+            <div class="site-state-item site-state-categories">
+
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+
+            </div>
+
+
+
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
-          
 
-          
-
-          
 
         </nav>
 
-        
+
 
         <div class="links-of-author motion-element">
-          
-            
+
+
               <span class="links-of-author-item">
                 <a href="https://github.com/swarosky44" target="_blank" title="GitHub">
-                  
+
                     <i class="fa fa-fw fa-github"></i>
-                  
+
                   GitHub
                 </a>
               </span>
-            
-          
+
+
         </div>
 
-        
-        
 
-        
-        
 
-        
+
+
 
 
       </section>
 
-      
 
-      
 
     </div>
   </aside>
 
 
-        
+
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+
+  &copy;
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Listen</span>
+  <span class="author" itemprop="copyrightHolder">listen</span>
 </div>
-
 
 <div class="powered-by">
   由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
@@ -490,22 +1523,17 @@
 </div>
 
 
-        
 
-        
+
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
-  
+
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -521,99 +1549,67 @@
 
 
 
-  
+
+
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
 
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
 
 
 
 
 
-  
-
-
-
-
-
-  
-
-
-
-
-
-  
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
 
 
 
-  
 
 
 
 
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
 
 </body>
 </html>
