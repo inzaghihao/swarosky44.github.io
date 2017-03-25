@@ -238,241 +238,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/10/12/Proxy 对象/" itemprop="url">
-                  Proxy 对象
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-12T20:27:52+08:00" content="2016-10-12">
-              2016-10-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近在扒 vue2.0 的源码，再看源码的时候遇见这样一段代码 -</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">./src/core/instance/proxy.js</div><div class="line"></div><div class="line"><span class="keyword">let</span> hasProxy = <span class="keyword">typeof</span> <span class="built_in">Proxy</span> !== <span class="string">'undefined'</span> &amp;&amp;</div><div class="line">	<span class="built_in">Proxy</span>.toString().match(<span class="regexp">/native code/</span>)</div><div class="line"></div><div class="line"><span class="keyword">let</span> proxyHandlers = &#123;</div><div class="line">	has (target, key) &#123;</div><div class="line">		...</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">vm._renderProxy = <span class="keyword">new</span> <span class="built_in">Proxy</span>(vm, proxyHandlers)</div></pre></td></tr></table></figure>
-<p>这段代码里用到一个 Proxy 对象，特地上 MDN 看了一下关于这个对象的介绍。</p>
-<p>在对象的基础操作上我们可以有效地通过 Proxy 实现代理模式。</p>
-<p>虽然还是 ES6 的规范(未必所有浏览器都已经实现了该对象)，但是它确实是一个实用性很强的对象，值得专门学习一下。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/12/Proxy 对象/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/08/Css Secrets a week - 2/" itemprop="url">
-                  CSS Secrets a week
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-08T20:53:20+08:00" content="2016-10-08">
-              2016-10-08
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Css-Study/" itemprop="url" rel="index">
-                    <span itemprop="name">Css Study</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="难题：实现半透明边框。"><a href="#难题：实现半透明边框。" class="headerlink" title="难题：实现半透明边框。"></a>难题：实现半透明边框。</h2><p>或许会感到莫名其妙，半透明色按照日常用的 opacity 或者 rgba 或者 hsla 就可以实现了。实现一个半透明边框为什么会有难点呢 ？</p>
-<p>不得不承认，读完 Css Secrets 本节之前，的确不知道半透明边框是不能按照半透明背景那样处理就可以实现了的。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/08/Css Secrets a week - 2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/09/26/Css Secrets a week/" itemprop="url">
                   CSS Secrets a week
                 </a>
@@ -1316,7 +1081,7 @@ var obj = window.F()
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1324,7 +1089,7 @@ var obj = window.F()
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -1333,7 +1098,7 @@ var obj = window.F()
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1381,7 +1146,7 @@ var obj = window.F()
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
