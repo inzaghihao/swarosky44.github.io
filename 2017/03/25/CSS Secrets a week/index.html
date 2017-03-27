@@ -88,23 +88,20 @@
 
 
 <meta name="description" content="很久没有写文章了，忙乎了大半年的项目 4 月 1 号就要上线了。相对之前个人时间也充裕了起来，继续写一篇关于 CSS Secrets 的二刷笔记吧 😎
-在日常开发中我们会遇见需要用 CSS 绘制一个圆的需求，通常来说我们需要元素等高等宽，然后将 border-radius 设置为大于等于高度（宽度）的一半的值。但是我们是否真的理解了 border-radius 属性的真实含义？
-&amp;lt;!— m">
+在日常开发中我们会遇见需要用 CSS 绘制一个圆的需求，通常来说我们需要元素等高等宽，然后将 border-radius 设置为大于等于高度（宽度）的一半的值。但是我们是否真的理解了 border-radius 属性的真实含义？">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS Secrets a week">
 <meta property="og:url" content="http://swarosky44.github.io/2017/03/25/CSS Secrets a week/index.html">
 <meta property="og:site_name" content="Listen">
 <meta property="og:description" content="很久没有写文章了，忙乎了大半年的项目 4 月 1 号就要上线了。相对之前个人时间也充裕了起来，继续写一篇关于 CSS Secrets 的二刷笔记吧 😎
-在日常开发中我们会遇见需要用 CSS 绘制一个圆的需求，通常来说我们需要元素等高等宽，然后将 border-radius 设置为大于等于高度（宽度）的一半的值。但是我们是否真的理解了 border-radius 属性的真实含义？
-&amp;lt;!— m">
+在日常开发中我们会遇见需要用 CSS 绘制一个圆的需求，通常来说我们需要元素等高等宽，然后将 border-radius 设置为大于等于高度（宽度）的一半的值。但是我们是否真的理解了 border-radius 属性的真实含义？">
 <meta property="og:image" content="http://oe3rjg2g6.bkt.clouddn.com/border-radius.jpeg">
 <meta property="og:image" content="http://oe3rjg2g6.bkt.clouddn.com/border-radius2.png">
-<meta property="og:updated_time" content="2017-03-27T01:10:21.000Z">
+<meta property="og:updated_time" content="2017-03-27T02:13:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS Secrets a week">
 <meta name="twitter:description" content="很久没有写文章了，忙乎了大半年的项目 4 月 1 号就要上线了。相对之前个人时间也充裕了起来，继续写一篇关于 CSS Secrets 的二刷笔记吧 😎
-在日常开发中我们会遇见需要用 CSS 绘制一个圆的需求，通常来说我们需要元素等高等宽，然后将 border-radius 设置为大于等于高度（宽度）的一半的值。但是我们是否真的理解了 border-radius 属性的真实含义？
-&amp;lt;!— m">
+在日常开发中我们会遇见需要用 CSS 绘制一个圆的需求，通常来说我们需要元素等高等宽，然后将 border-radius 设置为大于等于高度（宽度）的一半的值。但是我们是否真的理解了 border-radius 属性的真实含义？">
 <meta name="twitter:image" content="http://oe3rjg2g6.bkt.clouddn.com/border-radius.jpeg">
 
 
@@ -364,7 +361,7 @@
       
         <p>很久没有写文章了，忙乎了大半年的项目 4 月 1 号就要上线了。相对之前个人时间也充裕了起来，继续写一篇关于 CSS Secrets 的二刷笔记吧 😎</p>
 <p>在日常开发中我们会遇见需要用 CSS 绘制一个圆的需求，通常来说我们需要元素等高等宽，然后将 <code>border-radius</code> 设置为大于等于高度（宽度）的一半的值。但是我们是否真的理解了 <code>border-radius</code> 属性的真实含义？</p>
-<p>&lt;!— more —&gt;</p>
+<a id="more"></a>
 <h2 id="难题：自适应的椭圆"><a href="#难题：自适应的椭圆" class="headerlink" title="难题：自适应的椭圆"></a>难题：自适应的椭圆</h2><p>日常我们利用 CSS 绘制一个圆，代码如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.circle</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如果元素并非等高等宽，则将绘制出一个椭圆。</p>
@@ -437,6 +434,22 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/27/策略模式/" rel="prev" title="策略模式">
+                策略模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -504,7 +517,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -515,7 +528,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -526,7 +539,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
